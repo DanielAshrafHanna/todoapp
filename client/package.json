@@ -1,5 +1,5 @@
 {
-  "name": "mern-todo-app",
+  "name": "client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,7 +20,7 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "client"
   },
   "browserslist": {
     "production": [
