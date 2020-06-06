@@ -52,21 +52,16 @@ export default class CreateTodo extends Component {
             todo_completed: this.state.todo_completed
         };
 
-        // request.post(
-        //     'https://hooks.nabu.casa/gAAAAABezmLvPFgGvLfpzFDGnotIEi38mnzNznyGbylijG1WEZ-0X-mgRvYMi7_aMVzUs1E2CmkKNT_sV_5Qk5GTboaTrTwyOUcKT_s4GAFwA4xWjW8d2l1I-OYPJkJHNK_J5jk8p-OWb51REfKcHn5DLtIfc78D6HPEdLUSyeJFwYU-SXuioOw=',
-        //     { json: { key: 'value' } },
-        //     function (error, response, body) {
-        //         if (!error && response.statusCode == 200) {
-        //             console.log(body);
-        //         }
-        //     }
-        // );
+     
 
          axios.post('http://localhost:4000/todos/add', newTodo)
             .then(res => console.log(res.data));
         
             // axios.post('https://hooks.nabu.casa/gAAAAABezmLvPFgGvLfpzFDGnotIEi38mnzNznyGbylijG1WEZ-0X-mgRvYMi7_aMVzUs1E2CmkKNT_sV_5Qk5GTboaTrTwyOUcKT_s4GAFwA4xWjW8d2l1I-OYPJkJHNK_J5jk8p-OWb51REfKcHn5DLtIfc78D6HPEdLUSyeJFwYU-SXuioOw=') ////
             // .then(res => console.log(res.data));          sends hook to hassio
+      
+        
+
 
         this.setState({
             todo_description: '',
