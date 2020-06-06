@@ -8,6 +8,7 @@ const fetch = require('node-fetch'); // test
 const getRawBody = require('raw-body') // test
 const token  = '<https://hooks.nabu.casa/gAAAAABezmLvPFgGvLfpzFDGnotIEi38mnzNznyGbylijG1WEZ-0X-mgRvYMi7_aMVzUs1E2CmkKNT_sV_5Qk5GTboaTrTwyOUcKT_s4GAFwA4xWjW8d2l1I-OYPJkJHNK_J5jk8p-OWb51REfKcHn5DLtIfc78D6HPEdLUSyeJFwYU-SXuioOw=>'  // test
 const mongoose = require('mongoose');
+//const {MongoClient} = require('mongodb'); // online database
 const todoRoutes = express.Router();
 const path = require('path'); /// 3
 const PORT = process.env.PORT||4000;  //// 1
@@ -21,7 +22,7 @@ mongoose.connect(process.env.MONGODB_URI ||'mongodb://127.0.0.1:27017/todos', { 
 const connection = mongoose.connection;
 
 connection.once('open', function() {
-    console.log("MongoDB database connection established successfully");
+    console.log("MongoDB database connection established successfully :)");
 })
 
 todoRoutes.route('/').get(function(req, res) {
