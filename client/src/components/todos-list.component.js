@@ -20,8 +20,29 @@ export default class TodosList extends Component {
         this.state = {todos: []};
     }
 
+    // componentDidMount() {
+    //     axios.get('http://localhost:4000/todos/')
+    //         .then(response => {
+    //             this.setState({ todos: response.data });
+    //         })
+    //         .catch(function (error){
+    //             console.log(error);
+    //         })
+    // }
+
+    // componentDidUpdate() {
+    //     axios.get('http://localhost:4000/todos/')
+    //     .then(response => {
+    //         this.setState({ todos: response.data });
+    //     })
+    //     .catch(function (error){
+    //         console.log(error);
+    //     })
+
+    // }
+
     componentDidMount() {
-        axios.get('http://localhost:4000/todos/')
+        axios.get('todos/')
             .then(response => {
                 this.setState({ todos: response.data });
             })
@@ -31,7 +52,7 @@ export default class TodosList extends Component {
     }
 
     componentDidUpdate() {
-        axios.get('http://localhost:4000/todos/')
+        axios.get('todos/')
         .then(response => {
             this.setState({ todos: response.data });
         })
