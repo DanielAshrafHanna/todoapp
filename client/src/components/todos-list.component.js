@@ -68,23 +68,36 @@ export default class TodosList extends Component {
         })
     }
 
+    onSubmit(e) {
+        e.preventDefault();
+        
+       
+             axios.post('https://hooks.nabu.casa/gAAAAABezmLvPFgGvLfpzFDGnotIEi38mnzNznyGbylijG1WEZ-0X-mgRvYMi7_aMVzUs1E2CmkKNT_sV_5Qk5GTboaTrTwyOUcKT_s4GAFwA4xWjW8d2l1I-OYPJkJHNK_J5jk8p-OWb51REfKcHn5DLtIfc78D6HPEdLUSyeJFwYU-SXuioOw=') ////
+             .then(res => console.log("done"));  
+             
+             
+      
+        
+
+
+       
+    }
+
     render() {
         return (
-            <div>
-                <h3>Todos List</h3>
-                <table className="table table-striped" style={{ marginTop: 20 }} >
-                    <thead>
-                        <tr>
-                            <th>Description</th>
-                            <th>Responsible</th>
-                            <th>Priority</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        { this.todoList() }
-                    </tbody>
-                </table>
+            <div style={{marginTop: 10}}>
+                <h3>Demo</h3>
+                <form onSubmit={this.onSubmit}>
+                    <div className="form-group"> 
+                     
+                        </div>
+                  
+
+                    <div className="form-group">
+                        <input type="submit" value="submit" className="btn btn-primary" />
+                        
+                    </div>
+                </form>
             </div>
         )
     }
